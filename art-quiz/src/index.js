@@ -16,3 +16,21 @@ import image from "./images/lazy.png";
 // }
 
 // render();
+
+const toSettings = document.querySelector(".home__btn");
+const home = document.querySelector(".home");
+const settings = document.querySelector(".settings");
+const saveBtn = document.querySelector(".save__btn");
+
+toSettings.addEventListener("click", () => {
+  changePage(home, settings);
+});
+saveBtn.addEventListener("click", () => {
+  changePage(settings, home);
+});
+
+window.addEventListener("hashchange", (shownSection, hidenSection) => {});
+function changePage(shownSection, hidenSection) {
+  shownSection.classList.remove("active");
+  hidenSection.classList.add("active");
+}

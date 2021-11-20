@@ -12,7 +12,7 @@
       <div href="#" class="logo"></div>
     </header>
     <main>
-      <section class="home container">
+      <section class="home container hidden active">
         <div class="home__categories">
           <div class="home__art-qz">
             <div class="art-img"></div>
@@ -24,6 +24,51 @@
           </div>
         </div>
         <button class="home__btn">settings</button>
+      </section>
+      <section class="settings hidden">
+        <h2 class="settings__title">settings</h2>
+        <div class="settings__main">
+          <div class="set__volume">
+            <div class="volume__img"></div>
+            <div class="sound__cintrols">
+              <div class="sound__btn sound"></div>
+              <div class="mute__btn sound"></div>
+              <input
+                type="range"
+                name="volume"
+                value="40"
+                min="0"
+                max="100"
+                step="1"
+                class="volume"
+                style="
+                  background: linear-gradient(
+                    to right,
+                    rgb(113, 7, 7) 0%,
+                    rgb(113, 7, 7) 55%,
+                    rgb(255, 255, 255) 55%,
+                    white 100%
+                  );
+                "
+              />
+            </div>
+            <h3 class="volume__title">volume</h3>
+          </div>
+          <div class="set__time">
+            <div class="time__img"></div>
+
+            <div class="time__controls">
+              <input type="checkbox" id="game__type" name="scales" checked />
+              <label class="game__type-text"></label>
+              <label class="on-off" for="game__type">on/off</label>
+            </div>
+            <h3 class="time__title">time game</h3>
+          </div>
+        </div>
+        <div class="sett__btns">
+          <button class="save__btn btn">save</button>
+          <button class="default__btn btn">defaults</button>
+        </div>
       </section>
     </main>
   </body>

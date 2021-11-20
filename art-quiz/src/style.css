@@ -4,6 +4,7 @@
 body {
   background-color: #ffefdf;
 }
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -76,4 +77,106 @@ body {
   border: none;
   padding-left: 10px;
   cursor: pointer;
+}
+.settings {
+  color: #660033;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  margin-top: 2%;
+}
+.settings__main {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
+  width: 100%;
+}
+.set__volume,
+.set__time {
+  background-color: white;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.volume__img,
+.time__img {
+  background-repeat: no-repeat;
+  margin-top: 50px;
+}
+.volume__img {
+  width: 100px;
+  height: 82px;
+  background-image: url("./images/volume-on-w.png");
+}
+.time__img {
+  width: 85px;
+  height: 100px;
+  background-image: url("./images/timer-picture.png");
+}
+#game__type {
+  display: none; /* <--скрываем дефолтный чекбокс */
+}
+.game__type-text {
+  /* <-- стилизируем новый */
+  height: 12px;
+  width: 12px;
+  border: 1px solid gray;
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 3px;
+  margin-top: 20px;
+}
+[type="checkbox"]:checked + label:before {
+  /* <-- ставим иконку, когда чекбокс включен  */
+  content: "\2714";
+  position: absolute;
+  top: -8px;
+  left: -1px;
+  font-size: 23px;
+  color: #660033;
+}
+.time__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.volume {
+  margin-top: 50px;
+}
+.volume__title {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.on-off {
+  margin-top: 10px;
+}
+.time__title {
+  margin-top: 10px;
+}
+.btn {
+  background-color: #660033;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  width: 150px;
+  height: 50px;
+}
+.sett__btns {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+.save__btn {
+  margin-right: 30px;
+}
+
+.hidden {
+  display: none;
+}
+.active {
+  display: flex;
 }
