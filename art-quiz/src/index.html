@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art Quiz</title>
+    <link rel="shortcut icon" href="./images/fav.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <audio class="audio" autoplay>
+      <source
+        src="./music/Early Avril - Unicorn Heads.mp3"
+        type="audio/ogg; codecs=vorbis"
+      />
+    </audio>
     <header class="header">
       <div href="#" class="logo"></div>
     </header>
@@ -30,9 +37,8 @@
         <div class="settings__main">
           <div class="set__volume">
             <div class="volume__img"></div>
-            <div class="sound__cintrols">
+            <div class="sound__controls">
               <div class="sound__btn sound"></div>
-              <div class="mute__btn sound"></div>
               <input
                 type="range"
                 name="volume"
@@ -41,15 +47,6 @@
                 max="100"
                 step="1"
                 class="volume"
-                style="
-                  background: linear-gradient(
-                    to right,
-                    rgb(113, 7, 7) 0%,
-                    rgb(113, 7, 7) 55%,
-                    rgb(255, 255, 255) 55%,
-                    white 100%
-                  );
-                "
               />
             </div>
             <h3 class="volume__title">volume</h3>

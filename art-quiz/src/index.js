@@ -186,7 +186,7 @@ function showQuestionsAuthors(images) {
   let questionNumber = 0;
   nextBtns.forEach((nextBtn) => {
     nextBtn.addEventListener("click", () => {
-      if (questionNumber === 2) {
+      if (questionNumber === 9) {
         document.querySelector(".question").classList.add("hidden");
         mainResults.classList.remove("hidden");
         let correctAnswers = document.querySelectorAll(".dot-right").length;
@@ -198,6 +198,8 @@ function showQuestionsAuthors(images) {
           .addEventListener("click", () => {
             home.classList.add("active");
             document.querySelector(".quiz-result").classList.add("hidden");
+            location.reload();
+            return false;
           });
         document.querySelector(".question__progress").innerHTML = " ";
         questionNumber = 0;
@@ -344,7 +346,7 @@ function showQuestionsPictures(images) {
   let questionNumber = 0;
   nextBtns.forEach((nextBtn) => {
     nextBtn.addEventListener("click", () => {
-      if (questionNumber === 2) {
+      if (questionNumber === 9) {
         document.querySelector(".question").classList.add("hidden");
         mainResults.classList.remove("hidden");
         let correctAnswers = document.querySelectorAll(".dot-right").length;
@@ -356,6 +358,7 @@ function showQuestionsPictures(images) {
           .addEventListener("click", () => {
             home.classList.add("active");
             document.querySelector(".quiz-result").classList.add("hidden");
+            location.reload();
           });
       } else {
         questionsArr[questionNumber].classList.add("hidden");
@@ -415,3 +418,19 @@ function getRandomSet(lo, hi, n) {
   while (res.size < n) res.add(Math.floor(Math.random() * (hi - lo + 1)) + lo);
   return [...res];
 }
+
+const volumeLvl = document.querySelector(".volume");
+const audio = document.querySelector("audio");
+const volumeImg = document.querySelector(".sound__btn");
+audio.volume = volumeLvl.value / 100;
+
+volumeLvl.addEventListener("change", () => {
+  audio.volume = volumeLvl.value / 100;
+
+  if (volumeLvl.value == 0) {
+    console.log("aaaaaaaaaaaaa");
+    volumeImg.classList.add("sound__btn-mute");
+  } else {
+    volumeImg.classList.remove("sound__btn-mute");
+  }
+});
